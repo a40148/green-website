@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>green-website</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html><!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cities Under Pressure | Urban &amp; Global Challenges</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "on-primary-container": "#00586b",
+                        "background": "#131313",
+                        "on-primary-fixed": "#001f27",
+                        "tertiary-fixed-dim": "#b8c8da",
+                        "surface-dim": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#425261",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary": "#5c1900",
+                        "secondary": "#ffb59c",
+                        "primary-fixed": "#b4ebff",
+                        "inverse-primary": "#00677e",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-fixed-variant": "#394857",
+                        "surface-tint": "#3cd7ff",
+                        "on-secondary-fixed": "#390c00",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#832700",
+                        "on-surface-variant": "#bbc9cf",
+                        "primary-fixed-dim": "#3cd7ff",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-container": "#00d4ff",
+                        "on-secondary-container": "#511500",
+                        "outline": "#859398",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#fa5c1c",
+                        "on-tertiary": "#223240",
+                        "outline-variant": "#3c494e",
+                        "surface-bright": "#393939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed-variant": "#004e5f",
+                        "surface-container": "#20201f",
+                        "surface": "#131313",
+                        "tertiary": "#d0e1f3",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-tertiary-fixed": "#0d1d2a",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#003642",
+                        "primary": "#a8e8ff",
+                        "surface-variant": "#353535",
+                        "tertiary-fixed": "#d4e4f6",
+                        "tertiary-container": "#b4c5d6",
+                        "secondary-fixed-dim": "#ffb59c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-h1": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-h2": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-h3": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "display": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-h1": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-h2": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+        .neon-glow-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 shadow-[0_0_15px_rgba(0,212,255,0.1)]">
+<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold uppercase tracking-widest text-white font-space-grotesk">
+                Cities Under Pressure
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1 font-space-grotesk tracking-tight hover:text-cyan-300 transition-colors duration-300" href="#">Solutions</a>
+<a class="text-zinc-400 font-space-grotesk tracking-tight hover:text-cyan-300 transition-colors duration-300" href="#">Impact</a>
+<a class="text-zinc-400 font-space-grotesk tracking-tight hover:text-cyan-300 transition-colors duration-300" href="#">Grid</a>
+<a class="text-zinc-400 font-space-grotesk tracking-tight hover:text-cyan-300 transition-colors duration-300" href="#">Join</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold uppercase tracking-wider text-xs hover:scale-105 active:scale-95 transition-all duration-300 neon-glow-primary">
+                Take Action
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-zinc-950">
+<div class="absolute inset-0 z-0">
+<img alt="Urban Landscape" class="w-full h-full object-cover opacity-40 grayscale" data-alt="Distant aerial view of a dense futuristic megalopolis at night with glowing blue and white lights reflecting off steel structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWtRMgKwd87-S16ZXnGb-CSkV-z0td3Onhzy4AKTgUUdyUyIfe5cVamtwG0mnpkGUASRuFlzNUGd_oOppqQJeGGvRSClSf32Mkmq7j7G2v6L2o-W8JgIvXdkd0x8ikyRgdIusYychu5nd2jgfX8n0Jtjgl0gMyW8zG8JLs2IUNiPDGOpSyVjPszR_Nvc_pGD4a_Tw6oEl_FjLGvC9nzitTzINXckeJIZfCaRVe-pc8HQ5R1NJ3iBya6Ti25nQO-b84RiqTcKh3aw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-zinc-950/60"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<div class="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+</span>
+<span class="text-label-caps text-primary tracking-widest">LIVE SYSTEM UPDATE: 2024</span>
+</div>
+<h1 class="font-display text-display text-white mb-6 uppercase leading-none">
+                    Cities <br/>
+<span class="text-primary-container">Under Pressure</span>
+</h1>
+<p class="font-body-lg text-body-lg text-zinc-400 mb-10 max-w-2xl mx-auto">
+                    The urban landscape is evolving at a frantic pace. High-tech intervention is no longer a choice—it's our only survival strategy. Join the cyber-civic movement.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto bg-primary-container text-on-primary-container px-10 py-4 font-headline-h3 text-lg uppercase tracking-widest neon-glow-primary hover:neon-glow-hover transition-all">
+                        Take Action
+                    </button>
+<button class="w-full sm:w-auto border border-zinc-700 text-white px-10 py-4 font-headline-h3 text-lg uppercase tracking-widest hover:bg-secondary-container hover:border-secondary-container transition-all">
+                        Explore Data
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+<span class="text-label-caps text-zinc-500">Scroll to Decrypt</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Content Section: Challenges -->
+<section class="bg-white py-24 px-6 md:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-h1 text-headline-h1 text-zinc-950 mb-4 uppercase">The Core Strain</h2>
+<p class="font-body-lg text-body-lg text-zinc-600">The modern metropolis faces systemic failures that require immediate high-intensity civic engagement. We track three primary pressure points.</p>
+</div>
+<div class="text-zinc-950 font-label-caps text-right hidden md:block">
+                        01 // SYSTEM DIAGNOSTICS
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Overcrowding -->
+<div class="group">
+<div class="w-16 h-16 bg-zinc-950 flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary-container group-hover:text-zinc-950 text-4xl" data-icon="groups">groups</span>
+</div>
+<h3 class="font-headline-h3 text-headline-h3 text-zinc-900 mb-4 uppercase">Overcrowding</h3>
+<p class="font-body-md text-body-md text-zinc-600 leading-relaxed">
+                            As density reaches critical mass, verticality becomes our new horizon. We analyze human flow to optimize shared spaces in the neon-lit concrete jungle.
+                        </p>
+<div class="mt-6 w-full h-1 bg-zinc-100 overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Pollution -->
+<div class="group">
+<div class="w-16 h-16 bg-zinc-950 flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary-container group-hover:text-zinc-950 text-4xl" data-icon="air">air</span>
+</div>
+<h3 class="font-headline-h3 text-headline-h3 text-zinc-900 mb-4 uppercase">Pollution</h3>
+<p class="font-body-md text-body-md text-zinc-600 leading-relaxed">
+                            A smog-choked sky is a failure of logic. We deploy smart sensors to reclaim the air, turning urban corridors into breathable ecosystems once more.
+                        </p>
+<div class="mt-6 w-full h-1 bg-zinc-100 overflow-hidden">
+<div class="w-1/2 h-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Infrastructure Strain -->
+<div class="group">
+<div class="w-16 h-16 bg-zinc-950 flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary-container group-hover:text-zinc-950 text-4xl" data-icon="construction">construction</span>
+</div>
+<h3 class="font-headline-h3 text-headline-h3 text-zinc-900 mb-4 uppercase">Infrastructure</h3>
+<p class="font-body-md text-body-md text-zinc-600 leading-relaxed">
+                            The backbone of the city is cracking. Our grid solutions revitalize decaying transit and power lines through autonomous repair protocols.
+                        </p>
+<div class="mt-6 w-full h-1 bg-zinc-100 overflow-hidden">
+<div class="w-4/5 h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Innovative Addition) -->
+<section class="bg-zinc-900 py-20 px-6 border-y border-zinc-800">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="text-headline-h2 font-headline-h2 text-white mb-2">68%</div>
+<div class="text-label-caps text-cyan-400">Urban Population 2050</div>
+</div>
+<div class="text-center">
+<div class="text-headline-h2 font-headline-h2 text-white mb-2">1.2B</div>
+<div class="text-label-caps text-cyan-400">Infrastructure Gap</div>
+</div>
+<div class="text-center">
+<div class="text-headline-h2 font-headline-h2 text-white mb-2">24/7</div>
+<div class="text-label-caps text-cyan-400">Active Monitoring</div>
+</div>
+<div class="text-center">
+<div class="text-headline-h2 font-headline-h2 text-white mb-2">42K</div>
+<div class="text-label-caps text-cyan-400">Civic Nodes Joined</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-24 px-6 bg-zinc-950 overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10">
+<img alt="Grid pattern" class="w-full h-full object-cover" data-alt="Abstract glowing circuit board pattern overlapping a top-down view of a city grid at night with blue light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvgnrvVmIa9D1rwiWChvtq38MYLp4mLQb9PRsq8oXh_UVKPCS-edB3HZ_hLA1PvzPUeanCHNwEUANC26OOsOQksSLFIud6jkC-KkrnHLmEu--SQqcbPPrbix1jRNj9QzdUC5xaXUZjz_OSPW48N55-_uX9WhhvusNvuw2XGHggRJAu5vYAjTsytwzIbuhxF4AUhI-Dy0eDca5bLC2qwDsdG8-jERr7K9yCPVEENb4qN2Uy9KqHQohBIhSwjGghxAmczrODfPFGyA"/>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="bg-zinc-900 border border-zinc-800 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1">
+<h2 class="font-headline-h2 text-headline-h2 text-white mb-6 uppercase">Ready to rewire the city?</h2>
+<p class="font-body-lg text-body-lg text-zinc-400">The Cyber-Civic Initiative is looking for the next generation of urban architects. Download the grid toolkit and start contributing today.</p>
+</div>
+<div class="flex flex-col gap-4 w-full md:w-auto">
+<button class="bg-primary-container text-on-primary-container px-12 py-5 font-headline-h3 text-xl uppercase tracking-widest neon-glow-primary">Join the Initiative</button>
+<a class="text-center font-label-caps text-zinc-500 hover:text-white transition-colors" href="#">Download Whitepaper.pdf</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 border-t border-zinc-900 w-full border-t border-zinc-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-black text-white font-space-grotesk uppercase tracking-wider mb-2">Cities Under Pressure</div>
+<div class="font-space-grotesk text-sm uppercase tracking-wider text-zinc-500">© 2024 Cities Under Pressure. Cyber-Civic Initiative.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-space-grotesk text-sm uppercase tracking-wider text-zinc-500 hover:text-cyan-400 transition-colors" href="#">Privacy Policy</a>
+<a class="font-space-grotesk text-sm uppercase tracking-wider text-zinc-500 hover:text-cyan-400 transition-colors" href="#">Terms of Service</a>
+<a class="font-space-grotesk text-sm uppercase tracking-wider text-zinc-500 hover:text-cyan-400 transition-colors" href="#">Contact</a>
+<a class="font-space-grotesk text-sm uppercase tracking-wider text-zinc-500 hover:text-cyan-400 transition-colors" href="#">Global Registry</a>
+</div>
+</div>
+</footer>
+</body></html>
