@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+import { resolve } from 'path'
 
 export default defineConfig({
+  // Base path obrigatório com o nome exato do teu repositório no GitHub Pages
   base: '/green-website/', 
-  plugins: [
-    tailwindcss(),
-  ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        solucoes: resolve(__dirname, 'solucoes.html')
+      }
+    }
+  }
 })
